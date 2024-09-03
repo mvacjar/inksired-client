@@ -2,7 +2,7 @@ import styles from './listAddresses.module.scss';
 import { useState, useEffect } from 'react';
 import { Address } from '@/api';
 import { useAuth } from '@/hooks/useAuth';
-import { AddressBox } from '../ListAddresses/AddressBox';
+import { AddressBox } from './AddressBox';
 import { map } from 'lodash';
 
 const addressCtrl = new Address();
