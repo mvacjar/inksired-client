@@ -1,5 +1,5 @@
 export const ENV = {
-  SERVER_HOST: 'https://inksired-server-production.up.railway.app/',
+  SERVER_HOST: 'https://inksired-server-production.up.railway.app',
   API_URL: 'https://inksired-server-production.up.railway.app/api',
   ENDPOINTS: {
     AUTH: { REGISTER: 'auth/local/register', LOGIN: 'auth/local' },
