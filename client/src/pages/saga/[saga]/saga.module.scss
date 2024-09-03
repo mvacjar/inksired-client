@@ -1,0 +1,10 @@
+@import '@/scss/index.scss';
+
+.bodySagaContainer,
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}

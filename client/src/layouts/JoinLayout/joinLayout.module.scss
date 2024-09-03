@@ -1,0 +1,55 @@
+@import '@/scss/index.scss';
+
+.container {
+  max-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $background;
+}
+
+.navJoin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 50%;
+  height: 50%;
+  margin: 2rem 3rem;
+}
+
+.logoX {
+  margin: 2rem;
+}
+
+.containerBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.block {
+  height: 30vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 40%;
+    height: 40%;
+  }
+
+  .block {
+    width: 75vw;
+  }
+}

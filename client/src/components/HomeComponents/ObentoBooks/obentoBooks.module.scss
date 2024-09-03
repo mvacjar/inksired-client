@@ -1,0 +1,331 @@
+@import '@/scss/index.scss';
+
+.title {
+  padding: 0 3rem;
+  font-size: $h3;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  text-shadow: 1px 3px 3px #2d2d2d61;
+  &::before {
+    content: '';
+    height: 18%;
+    width: 77%;
+    display: block;
+    z-index: -5;
+    opacity: 30%;
+    position: absolute;
+    transition: all 0.3s ease;
+    background-color: $accent;
+  }
+  &:hover::before {
+    height: 50%;
+  }
+}
+
+.gridContainer {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  padding: 8rem 0rem;
+  margin: 0;
+  grid-gap: 2rem;
+  width: 94vw;
+  height: 130vh;
+  grid-template-areas:
+    'image1 image2 image3 image4 image5'
+    'image1 image2 image3 image4 image5'
+    'image6 image7 image8 image9 image10'
+    'image6 image7 image8 image9 image10';
+}
+
+.image1 {
+  grid-area: image1;
+  top: 8rem;
+}
+.image2 {
+  grid-area: image2;
+}
+.image3 {
+  grid-area: image3;
+  top: 8rem;
+}
+.image4 {
+  grid-area: image4;
+}
+.image5 {
+  grid-area: image5;
+  top: 8rem;
+}
+.image6 {
+  grid-area: image6;
+  top: 8rem;
+}
+.image7 {
+  grid-area: image7;
+}
+.image8 {
+  grid-area: image8;
+  top: 8rem;
+}
+.image9 {
+  grid-area: image9;
+}
+.image10 {
+  grid-area: image10;
+  top: 8rem;
+}
+
+.image1,
+.image2,
+.image3,
+.image4,
+.image5,
+.image6,
+.image7,
+.image8,
+.image9,
+.image10 {
+  border-radius: $border2;
+  position: relative;
+  min-width: 100px;
+  min-height: 250px;
+
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    position: absolute;
+    transform: scale(1.05);
+    box-shadow: 2px 2px 10px #866e5253;
+  }
+}
+
+.image2,
+.image7,
+.image4,
+.image9 {
+  .iconHeart {
+    position: absolute;
+    bottom: 1rem;
+    left: 0.5rem;
+    background-color: #fffbefb0;
+    border-radius: $border2;
+    padding: 0.3rem;
+    transition: transform 0.1s ease-in-out;
+    z-index: 10;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.image1,
+.image6,
+.image3,
+.image8,
+.image5,
+.image10 {
+  .iconHeart {
+    position: absolute;
+    bottom: 1rem;
+    left: 0.5rem;
+    background-color: #fffbefb0;
+    border-radius: $border2;
+    padding: 0.3rem;
+    transition: transform 0.1s ease-in-out;
+    z-index: 10;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+// Prices
+
+.priceContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.originalPrice {
+  font-size: $small;
+  color: $quinquenary;
+  text-decoration: line-through;
+}
+
+.discountedPrice {
+  font-size: $h6;
+  color: $accent;
+  font-weight: bolder;
+}
+
+.regularPrice {
+  font-weight: bolder;
+  font-size: 0.9rem;
+  font-size: $h6;
+}
+
+@media (max-width: 1300px) {
+  .title {
+    padding: 0rem 3rem;
+  }
+  .gridContainer {
+    width: 85vw;
+    height: 160vh;
+    padding: 4rem 0rem 8rem 3.5rem;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      'image1 image2 image3'
+      'image1 image2 image3'
+      'image4 image5 image6'
+      'image4 image5 image6'
+      'image7 image8 image9'
+      'image7 image8 image9';
+  }
+
+  .image1 {
+    grid-area: image1;
+    top: 8rem;
+  }
+  .image2 {
+    grid-area: image2;
+    top: 0rem;
+  }
+  .image3 {
+    grid-area: image3;
+    top: 8rem;
+  }
+  .image4 {
+    grid-area: image4;
+    top: 8rem;
+  }
+  .image5 {
+    grid-area: image5;
+    top: 0rem;
+  }
+  .image6 {
+    grid-area: image6;
+    top: 8rem;
+  }
+  .image7 {
+    grid-area: image7;
+    top: 8rem;
+  }
+  .image8 {
+    grid-area: image8;
+    top: 0rem;
+  }
+  .image9 {
+    grid-area: image9;
+    top: 8rem;
+  }
+  .image10 {
+    grid-area: none;
+    display: none;
+    top: 0rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .gridContainer {
+    width: 90vw;
+    height: 150vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .gridContainer {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    padding: 4rem 2rem 4rem 3rem;
+    width: 75vw;
+    height: 200vh;
+    grid-template-areas:
+      'image1 image2'
+      'image1 image2'
+      'image3 image4'
+      'image3 image4'
+      'image5 image6'
+      'image5 image6'
+      'image7 image8'
+      'image7 image8'
+      'image9 image10'
+      'image9 image10';
+  }
+
+  .image1 {
+    grid-area: image1;
+    top: 4rem;
+  }
+  .image2 {
+    grid-area: image2;
+    top: 0rem;
+  }
+  .image3 {
+    grid-area: image3;
+    top: 0rem;
+    top: 4rem;
+  }
+  .image4 {
+    grid-area: image4;
+
+    top: 0rem;
+  }
+  .image5 {
+    grid-area: image5;
+    top: 0rem;
+    top: 4rem;
+  }
+  .image6 {
+    grid-area: image6;
+    top: 0rem;
+  }
+  .image7 {
+    grid-area: image7;
+    top: 0rem;
+    top: 4rem;
+  }
+  .image8 {
+    grid-area: image8;
+    top: 0rem;
+  }
+  .image9 {
+    grid-area: image9;
+    top: 0rem;
+    top: 4rem;
+  }
+  .image10 {
+    grid-area: image10;
+    top: 0rem;
+  }
+}
+
+@media (max-width: 568px) {
+  .gridContainer {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    padding: 4rem 1rem 4rem 4rem;
+    width: 90vw;
+    height: 160vh;
+  }
+}

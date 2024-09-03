@@ -1,0 +1,106 @@
+@import '@/scss/index.scss';
+
+.genresWrapper {
+  margin: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.genresContent {
+  position: relative;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+}
+
+.leftArrowWrapper,
+.rightArrowWrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 80;
+}
+
+.leftArrowWrapper {
+  left: 0;
+}
+
+.rightArrowWrapper {
+  right: 0;
+}
+
+.leftArrowContainer,
+.rightArrowContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.leftArrowContainer {
+  justify-content: flex-start;
+  background: linear-gradient(90deg, #fffbef, #fffbef00);
+}
+
+.rightArrowContainer {
+  justify-content: flex-end;
+  background: linear-gradient(90deg, #fffbef00, #fffbef);
+}
+
+.carouselItems {
+  display: inline-flex;
+  align-items: center;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+
+.carouselItems::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselItem {
+  flex: 0 0 8rem;
+  color: $text;
+  margin-right: 1rem;
+  padding: $paddingButton;
+  white-space: nowrap;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: $border2;
+  border: 2px solid $quaternary;
+  transition: background-color 0.3s ease-in-out;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+
+  &:hover {
+    background-color: $quaternary;
+    box-shadow: 1px 2px 8px #3d322823;
+  }
+}
+
+@media (max-width: 568px) {
+  .genresWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .genresContent {
+    width: 70vw;
+    left: 2rem;
+  }
+
+  .carouselItem {
+    flex: 0 0 8rem;
+    color: $text;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+  }
+}

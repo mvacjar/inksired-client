@@ -1,0 +1,11 @@
+@import '@/scss/index.scss';
+
+.labelDiscount {
+  color: $background;
+  font-size: 0.8rem;
+  background-color: $accent;
+  position: absolute;
+  border-radius: $border1;
+  padding: $paddingButton;
+  box-shadow: 0.5px 2px 6px #122d50;
+}

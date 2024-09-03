@@ -1,0 +1,73 @@
+@import '@/scss/index.scss';
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input,
+.inputSmall {
+  border: none;
+  font-size: $small;
+  color: $text;
+  border-radius: $border2;
+  background-color: #fffbefb2;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $tertiary;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.inputsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.inputSmall {
+  width: 50%;
+  &:nth-child(1) {
+    margin-right: 0rem;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 0;
+}
+
+.saveButton {
+  background-color: $accent;
+  color: $background;
+  border-radius: $border2;
+  font-size: $small;
+  border: none;
+  cursor: pointer;
+  padding: $paddingButton;
+  margin-top: 0rem;
+  white-space: nowrap;
+  transition: transform ease 0.2s;
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 768px) {
+  .inputsContainer {
+    flex-direction: column;
+  }
+
+  .input,
+  .inputSmall {
+    width: 90%;
+  }
+}

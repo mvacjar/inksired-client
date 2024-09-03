@@ -1,0 +1,36 @@
+@import '@/scss/index.scss';
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselContainer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.carouselBooksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.noveltyContainer,
+.obentoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bannerAdContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}

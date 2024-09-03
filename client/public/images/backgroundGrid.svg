@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="visual"
+   viewBox="0 0 900 329.63464"
+   width="900"
+   height="329.63464"
+   version="1.1"
+   sodipodi:docname="backgroundGrid.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.39333333"
+     inkscape:cx="447.45763"
+     inkscape:cy="217.37288"
+     inkscape:window-width="1376"
+     inkscape:window-height="908"
+     inkscape:window-x="0"
+     inkscape:window-y="39"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="visual" />
+  <path
+     d="m 0,140 75,38 c 75,38 225,114 375,140 150,26 300,2 375,-10 l 75,-12 V 144 L 825,126 C 750,108 600,72 450,48 300,24 150,12 75,6 L 0,0 Z"
+     fill="#b39a81"
+     id="path2"
+     style="fill:#ddcdbe;fill-opacity:1" />
+</svg>

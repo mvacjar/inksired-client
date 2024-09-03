@@ -1,0 +1,58 @@
+@import '@/scss/index.scss';
+
+.navCartContainer {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  background-image: url('/images/layer-cart.svg');
+  background-size: cover;
+  height: 25vh;
+  top: -5rem;
+}
+
+.sectionCartContainer {
+  position: relative;
+}
+
+.arrowContainer {
+  display: flex;
+  justify-content: flex-start;
+  top: 5rem;
+  margin-left: 3rem;
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 3rem;
+  filter: drop-shadow(5px 2px 8px #010100);
+  &:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in;
+  }
+  &:active {
+    transform: scale(1);
+    transition: transform 0.2s ease-in;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: flex-end;
+  top: 5rem;
+  margin-right: 3rem;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: -1rem;
+  filter: drop-shadow(5px 2px 8px #010100);
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}

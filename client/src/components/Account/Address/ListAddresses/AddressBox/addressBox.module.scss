@@ -1,0 +1,65 @@
+@import '@/scss/index.scss';
+
+.boxWrapper {
+  display: flex;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.boxContainer {
+  padding: 3rem 8rem 3rem 3rem;
+  background-color: $quaternary;
+  border-radius: $border2;
+  box-sizing: border-box;
+  white-space: wrap;
+  min-width: 23rem;
+  box-shadow: 2px 2px 10px rgba(81, 81, 81, 0.286);
+  transition: transform 0.3s ease, border 0.3s ease;
+  &:hover {
+    border: 2px solid $primary;
+  }
+}
+
+.iconsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+
+.iconEdit {
+  background-color: $primary;
+  padding: 0.3rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $secondary;
+  border-top-right-radius: $border2;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: $accent;
+    transform: scale(1.05);
+  }
+}
+
+.iconDelete {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+  border-bottom-right-radius: $border2;
+  background-color: $primary;
+  padding: 0.4rem;
+  transition: background-color 0.3s ease, transform 0.3s ease; // Añadir transición
+
+  &:hover {
+    background-color: $accent;
+    transform: scale(1.05);
+  }
+}

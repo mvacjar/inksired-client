@@ -1,0 +1,64 @@
+@import '@/scss/index.scss';
+
+.basicLayout {
+  padding-bottom: 5rem;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 4rem 0 2rem 0;
+  z-index: 5;
+}
+
+.title {
+  opacity: 1;
+  font-size: $h3;
+  padding-bottom: 1rem;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  text-shadow: 1px 3px 3px #2d2d2d61;
+  &::before {
+    content: '';
+    height: 10%;
+    width: 100%;
+    display: block;
+    z-index: -5;
+    opacity: 30%;
+    position: absolute;
+    transition: all 0.3s ease;
+    background-color: $accent;
+  }
+  &:hover::before {
+    height: 40%;
+  }
+}
+
+.messageNotFound {
+  font-size: $h5;
+  padding: 2rem 4rem;
+  white-space: wrap;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

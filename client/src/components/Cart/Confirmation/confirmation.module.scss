@@ -1,0 +1,34 @@
+@import '@/scss/index.scss';
+
+.title {
+  text-align: center;
+  font-size: $h3;
+  margin-top: 3rem;
+}
+
+.text {
+  text-align: center;
+  font-size: $h5;
+  margin-top: 1rem;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  margin-top: 2rem;
+  padding: $paddingButton;
+  background-color: $accent;
+  color: $background;
+  border: none;
+  border-radius: $border1;
+  font-size: $h6;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $text;
+  }
+}

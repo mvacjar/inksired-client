@@ -1,0 +1,141 @@
+@import '@/scss/index.scss';
+
+.authorContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 2rem 0 7rem;
+}
+
+.namecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  font-size: $h3;
+  padding-bottom: 2rem;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  text-shadow: 1px 3px 3px #2d2d2d61;
+  &::before {
+    content: '';
+    height: 10%;
+    width: 100%;
+    display: block;
+    z-index: -5;
+    opacity: 30%;
+    position: absolute;
+    transition: all 0.3s ease;
+    background-color: $accent;
+  }
+  &:hover::before {
+    height: 40%;
+  }
+}
+
+.titleBooks,
+.sagaTitle {
+  font-size: $h5;
+  margin: 0.5rem 0 0.5rem 1rem;
+  white-space: wrap;
+  text-shadow: 1px 3px 3px #2d2d2d61;
+}
+
+.booksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.gridItem {
+  position: relative;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+}
+
+.bookContainer {
+  margin: 1rem 0 1rem 1rem;
+  z-index: 10;
+  max-width: 200px;
+}
+
+.bookCover {
+  max-width: 200px;
+  max-height: 300px;
+  border-radius: $border1;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  gap: 2rem;
+  box-shadow: 5px 5px 10px #866e5253;
+}
+
+.book {
+  > div {
+    position: relative;
+
+    > img {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .discount {
+      position: absolute;
+      top: -0.5rem;
+      right: -1rem;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &:hover > div > img {
+    transform: scale(1.03);
+  }
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleBook {
+  font-size: $h6;
+  white-space: wrap;
+  margin-top: 10px;
+}
+.orderSaga {
+  color: $quinquenary;
+}
+
+.authorBook {
+  font-size: $small;
+  color: $primary;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.originalPrice {
+  font-size: $small;
+  color: $quinquenary;
+  text-decoration: line-through;
+}
+
+.discountedPrice {
+  font-size: $h6;
+  color: $accent;
+  font-weight: bolder;
+}
+
+.regularPrice {
+  font-weight: bolder;
+  font-size: 0.9rem;
+  font-size: $h6;
+}

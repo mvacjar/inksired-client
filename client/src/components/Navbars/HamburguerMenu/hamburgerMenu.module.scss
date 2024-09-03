@@ -1,0 +1,125 @@
+@import '@/scss/index.scss';
+
+.hamburgerMenu {
+  position: relative;
+  display: inline-block;
+}
+
+@keyframes spinRight {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinRight {
+  animation: spinRight 0.5s ease-in-out;
+}
+
+@keyframes spinLeft {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.spinLeft {
+  animation: spinLeft 0.5s ease-in-out;
+}
+
+.logo {
+  filter: drop-shadow(5px 2px 8px #010100);
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideRight {
+  animation: slideRight 1s ease-out;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.slideLeft {
+  animation: slideLeft 1s ease-out;
+}
+
+.dropdownMenu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background-color: $text;
+  box-shadow: 5px 10px 20px #00000095;
+  border: none;
+  border-radius: $border2;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.menuContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem 2rem 2rem 1rem;
+}
+
+.line {
+  display: block;
+  text-decoration: none;
+  color: $background;
+  border-bottom: 1px solid #fffbef66;
+  width: 10rem;
+}
+
+.linkTop,
+.link,
+.linkBottom {
+  color: $background;
+}
+
+.linkTop {
+  margin: 0.5rem 0 0 0;
+}
+
+.line {
+  margin: 0.5rem 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.linkTitle {
+  color: $background;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.logoutButton {
+  color: $background;
+}

@@ -1,0 +1,74 @@
+@import '@/scss/index.scss';
+
+.wrapperContainer {
+  margin-top: 3rem;
+  background-color: $quaternary;
+  border-radius: $border1;
+}
+
+.summaryContainer {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.summaryItem1,
+.summaryItem2,
+.summaryItem3,
+.summaryItem4 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.summaryItem1,
+.sumamaryItem4 {
+  line-height: 3rem;
+}
+
+.summaryItem3 {
+  border-bottom: 1px solid $quinquenary;
+  line-height: 3rem;
+}
+
+.summaryLabel,
+.summaryValue {
+  font-size: $h6;
+  font-weight: lighter;
+}
+
+.summaryLabelTotal,
+.summaryValueTotal {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  margin-top: 2rem;
+  padding: $paddingButton;
+  background-color: $accent;
+  color: $background;
+  border: none;
+  border-radius: $border1;
+  font-size: $h6;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $text;
+  }
+}
+
+@media (max-width: 968px) {
+  .wrapperContainer {
+    margin-left: 0;
+  }
+  .buttonContainer {
+    margin-left: 0;
+  }
+}

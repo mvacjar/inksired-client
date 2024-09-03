@@ -1,0 +1,145 @@
+@import '@/scss/index.scss';
+
+.infoTextContainer {
+  margin-left: 2rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0;
+  &:hover .gridItem:not(:hover) .bookCover {
+    opacity: 0.7;
+  }
+}
+
+.gridItem {
+  position: relative;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+
+  &:hover {
+    .bookCover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Book Cover
+
+.bookContainer {
+  margin: 1rem 0 1rem 2rem;
+  z-index: 10;
+  max-width: 200px;
+}
+
+.bookCover {
+  max-width: 200px;
+  max-height: 300px;
+  border-radius: $border1;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  gap: 2rem;
+  box-shadow: 5px 5px 10px #866e5253;
+}
+
+.book {
+  > div {
+    position: relative;
+
+    > img {
+      transition: opacity 0.3s ease;
+    }
+
+    .discount {
+      position: absolute;
+      top: -0.5rem;
+      right: -1rem;
+    }
+  }
+}
+
+// Book's data
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.orderTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.orderBook {
+  color: $quinquenary;
+}
+
+.titleBook {
+  font-size: $h6;
+  white-space: wrap;
+  margin-top: 10px;
+  line-height: 1;
+}
+
+.author {
+  font-size: $small;
+  color: $primary;
+  font-weight: bolder;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Prices
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.originalPrice {
+  font-size: $small;
+  color: $quinquenary;
+  text-decoration: line-through;
+}
+
+.discountedPrice {
+  font-size: $h6;
+  color: $accent;
+  font-weight: bolder;
+}
+
+.regularPrice {
+  font-weight: bolder;
+  font-size: 0.9rem;
+  font-size: $h6;
+}
+
+// Heart
+
+.iconHeartContainer {
+  position: relative;
+}
+
+.iconHeart {
+  position: absolute;
+  bottom: 1rem;
+  left: 0.5rem;
+  background-color: #fffbefc4;
+  border-radius: $border2;
+  padding: 0.3rem;
+  transition: transform 0.1s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}

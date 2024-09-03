@@ -1,0 +1,124 @@
+@import '@/scss/index.scss';
+
+.basketContainer {
+  border-bottom: 2px solid $secondary;
+  margin-top: 3rem;
+}
+
+.basketTitle {
+  font-size: $h4;
+  margin-bottom: 1rem;
+}
+
+.basketBooks {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.bookCover {
+  max-width: 100px;
+  max-height: 130px;
+  border-radius: $border1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 5px 5px 10px #866e5253;
+}
+
+.bookInfoWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.booksInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: $h5;
+  font-family: 'Bangla MN';
+  white-space: wrap;
+  line-height: none;
+}
+
+.authors {
+  color: $secondary;
+  margin: 0;
+  padding: 0;
+  &:hover {
+    cursor: pointer;
+    text-decoration: solid underline $secondary;
+  }
+}
+
+.sagaWrapper,
+.saga {
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  white-space: wrap;
+}
+
+.sagaTitle {
+  color: $secondary;
+  &:hover {
+    cursor: pointer;
+    text-decoration: solid underline $secondary;
+  }
+}
+
+.sagaPretitle {
+  text-decoration: none;
+}
+
+.sagaOrder {
+  color: $quinquenary;
+  display: flex;
+  align-items: flex-end;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.originalPrice {
+  font-size: $small;
+  color: $quinquenary;
+  text-decoration: line-through;
+}
+
+.discountedPrice {
+  font-size: $h6;
+  color: $accent;
+  font-weight: bolder;
+}
+
+.regularPrice {
+  font-weight: bolder;
+  font-size: 0.9rem;
+  font-size: $h6;
+}
+
+.quantity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 35%;
+}
+
+@media (max-width: 968px) {
+  .basketContainer {
+    border-right: none;
+    border-bottom: 2px solid $secondary;
+  }
+}

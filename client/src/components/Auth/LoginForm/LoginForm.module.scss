@@ -1,0 +1,55 @@
+@import '@/scss/index.scss';
+
+// Form
+.formContainer {
+  min-width: 26rem;
+}
+
+.inputSign {
+  border: none;
+  border-radius: $border2;
+  background-color: $blurInput;
+  margin: 1rem 0;
+  min-width: 100%;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #556c8d3d;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.errorMessage {
+  font-size: $small;
+  color: $primary;
+}
+
+.signInButton {
+  background-color: $accent;
+  color: $background;
+  border-radius: $border2;
+  font-size: $small;
+  border: none;
+  cursor: pointer;
+  padding: $paddingButton;
+  margin-top: 0.5rem;
+  white-space: nowrap;
+  transition: transform ease 0.2s;
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    min-width: 10rem;
+  }
+
+  .inputSign {
+    font-size: $small;
+  }
+}

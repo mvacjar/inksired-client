@@ -1,0 +1,59 @@
+@import '@/scss/index.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1rem 0;
+}
+
+.selectContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.select {
+  border: none;
+  border-radius: $border2;
+  background-color: $blurInput;
+  padding: $paddingButton;
+  transition: background-color 0.3s ease;
+  margin-right: 1rem;
+  width: 20vw;
+
+  &:hover {
+    background-color: #556c8d3d;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.option {
+  min-width: 100%;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.saveButton {
+  background-color: $accent;
+  color: $background;
+  border-radius: $border2;
+  font-size: $small;
+  border: none;
+  cursor: pointer;
+  padding: $paddingButton;
+  white-space: nowrap;
+  transition: transform ease 0.2s;
+  &:hover {
+    transform: translateY(-2px);
+  }
+}

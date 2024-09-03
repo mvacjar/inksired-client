@@ -1,0 +1,62 @@
+@import '@/scss/index.scss';
+
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 30vw;
+  background-color: #96503ed4;
+  border-radius: $border2;
+  padding: 3rem;
+  margin: 1rem;
+  gap: 1rem;
+  box-shadow: 4px 4px 20px #866e5281;
+}
+
+.icon {
+  margin: 1rem;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.titleContainer,
+.descriptionContainer {
+  color: $background;
+}
+
+.titleContainer {
+  font-size: $h6;
+}
+
+.descriptionContainer {
+  font-size: $small;
+}
+
+@media (max-width: 1300px) {
+  .section {
+    flex-direction: column;
+  }
+
+  .infoContainer {
+    min-width: 40vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .infoContainer {
+    min-width: 70vw;
+    flex-direction: column;
+  }
+}

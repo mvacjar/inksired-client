@@ -1,0 +1,274 @@
+@import '@/scss/index.scss';
+
+.bookDescriptionContainer {
+  margin: 1rem 1rem;
+  padding: 2rem 2rem 2rem 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  border: 10px double $quaternary;
+  border-radius: $border2;
+  box-shadow: 5px 5px 10px #866e522e;
+  max-width: 50rem;
+}
+
+// Image
+
+.bookContainer {
+  z-index: 10;
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.bookCover {
+  margin-bottom: 0rem;
+  max-width: 200px;
+  max-height: 300px;
+  border-radius: $border1;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 5px 5px 10px #866e522e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+// Prices
+
+.discount {
+  position: relative;
+  bottom: 19rem;
+  left: 9.3rem;
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.originalPrice {
+  font-size: $small;
+  color: $quinquenary;
+  text-decoration: line-through;
+}
+
+.discountedPrice {
+  font-size: $h6;
+  color: $accent;
+  font-weight: bolder;
+}
+
+.regularPrice {
+  font-weight: bolder;
+  font-size: 0.9rem;
+  font-size: $h6;
+}
+
+// Button Add to bad and Heart
+
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.iconHeartContainer {
+  position: relative;
+}
+
+.iconHeart {
+  position: absolute;
+  bottom: 3.5rem;
+  left: 0.5rem;
+  background-color: #fffbefc4;
+  border-radius: $border2;
+  padding: 0.3rem;
+  transition: transform 0.1s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.buyBtn {
+  border-radius: $border2;
+  padding: $paddingButton;
+  background-color: $primary;
+  color: $background;
+  transition: transform 0.1s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.loading {
+  background-color: transparent;
+  padding-right: 3rem;
+}
+
+// Description
+
+.descriptionContainer {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.title {
+  white-space: wrap;
+}
+
+.checkIcon {
+  margin-right: 0.5rem;
+}
+
+.stock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d3e1f6;
+  padding: $paddingButton;
+  border-radius: $border2;
+  white-space: nowrap;
+}
+
+.authorContainer {
+  margin: 0;
+  padding: 0;
+}
+
+.author,
+.genres {
+  color: $primary;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  &:hover {
+    cursor: pointer;
+    text-decoration: solid underline $secondary;
+  }
+}
+
+.genres {
+  color: $secondary;
+}
+
+.sagaWrapper,
+.saga {
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.sagaTitle {
+  color: $secondary;
+  &:hover {
+    cursor: pointer;
+    text-decoration: solid underline $secondary;
+  }
+}
+
+.sagaPretitle {
+  text-decoration: none;
+}
+.sagaOrder {
+  color: $quinquenary;
+}
+
+.synopsis {
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.genresContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: $quaternary;
+}
+
+@media (max-width: 1600px) {
+  .bookDescriptionContainer {
+    width: 89vw;
+  }
+}
+
+@media (max-width: 1300px) {
+  .bookDescriptionContainer {
+    width: 86vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  .bookDescriptionContainer {
+    width: 82vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .bookDescriptionContainer {
+    flex-direction: column;
+  }
+
+  .bookContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+  }
+
+  .btnContainer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 568px) {
+  .bookDescriptionContainer {
+    padding: 2rem;
+  }
+
+  .bookCover {
+    width: 170px;
+    height: 250px;
+  }
+
+  .discount {
+    position: relative;
+    bottom: 16rem;
+    left: 7.5rem;
+  }
+
+  .descriptionContainer {
+    margin-left: 0;
+  }
+}

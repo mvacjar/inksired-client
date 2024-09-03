@@ -1,0 +1,273 @@
+@import '@/scss/index.scss';
+
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: $h3;
+  padding-bottom: 1rem;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  text-shadow: 1px 3px 3px #2d2d2d61;
+  &::before {
+    content: '';
+    height: 10%;
+    width: 100%;
+    display: block;
+    z-index: -5;
+    opacity: 30%;
+    position: absolute;
+    transition: all 0.3s ease;
+    background-color: $accent;
+  }
+  &:hover::before {
+    height: 40%;
+  }
+}
+
+.booksWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 95vw;
+  padding: 2rem 0;
+  overflow-y: hidden;
+}
+
+.booksContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+}
+
+// Carousel
+
+.carouselItems {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  overflow-y: hidden;
+}
+
+.carouselItems::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselItem {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.backgroundImage {
+  margin: 0;
+}
+
+.gridItem {
+  position: relative;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+
+  &:hover {
+    .bookCover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Heart Icon
+
+.heartContainer {
+  position: relative;
+}
+
+.iconHeart {
+  position: absolute;
+  bottom: 0.8rem;
+  left: 0.5rem;
+  background-color: #fffbefb0;
+  border-radius: $border2;
+  padding: 0.3rem;
+  transition: transform 0.1s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+// Cover
+
+.bookContainer {
+  margin: 1rem 0 1rem 2rem;
+  z-index: 10;
+  max-width: 200px;
+}
+
+.bookCover {
+  max-width: 200px;
+  max-height: 300px;
+  border-radius: $border1;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  gap: 2rem;
+  box-shadow: 5px 5px 10px #866e5253;
+}
+
+.book {
+  > div {
+    position: relative;
+
+    > img {
+      transition: opacity 0.3s ease;
+    }
+
+    .discount {
+      position: absolute;
+      top: -0.5rem;
+      right: -1rem;
+    }
+  }
+}
+
+// Book's data
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleBook {
+  font-size: $h6;
+  white-space: wrap;
+  margin-top: 10px;
+}
+
+.author {
+  font-size: 0.8rem;
+  color: $primary;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.sagaOrder {
+  color: $quinquenary;
+}
+
+.sagaTitle {
+  color: $secondary;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Prices
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.originalPrice {
+  font-size: $small;
+  color: $quinquenary;
+  text-decoration: line-through;
+}
+
+.discountedPrice {
+  font-size: $h6;
+  color: $accent;
+  font-weight: bolder;
+}
+
+.regularPrice {
+  font-weight: bolder;
+  font-size: 0.9rem;
+  font-size: $h6;
+}
+
+// Arrows
+
+.leftArrowWrapper,
+.rightArrowWrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 80;
+}
+
+.leftArrowWrapper {
+  left: 0;
+}
+
+.rightArrowWrapper {
+  right: 0;
+}
+
+.leftArrowWrapper,
+.rightArrowWrapper {
+  opacity: 0;
+  transform: translateX(-50px) translateY(-50%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.leftArrowWrapper.show,
+.rightArrowWrapper.show {
+  opacity: 1;
+  transform: translateX(0) translateY(-50%);
+}
+
+.leftArrowContainer,
+.rightArrowContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 340px;
+  cursor: pointer;
+  transition: opacity 1s ease-in-out;
+}
+
+.leftArrowContainer {
+  padding: 0 8rem 0 1rem;
+  justify-content: flex-start;
+  background: linear-gradient(
+    to right,
+    rgba(255, 251, 239, 0.8) 0%,
+    rgba(255, 251, 239, 0) 70%
+  );
+}
+
+.rightArrowContainer {
+  padding: 0 0.6rem 0 5rem;
+  justify-content: flex-end;
+  background: linear-gradient(
+    to right,
+    rgba(255, 251, 239, 0) 0%,
+    rgba(255, 251, 239, 0.8) 70%
+  );
+}

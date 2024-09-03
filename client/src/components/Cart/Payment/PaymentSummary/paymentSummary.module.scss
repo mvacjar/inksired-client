@@ -1,0 +1,101 @@
+@import '@/scss/index.scss';
+
+.paymentTitle {
+  margin: 3rem 0 2rem 0;
+}
+
+.block,
+.blockTotal {
+  background-color: $quaternary;
+  width: 100%;
+  border-radius: $border2;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $primary;
+  padding: $paddingButton;
+
+  &:last-of-type {
+    border: 0;
+    padding-bottom: 0;
+  }
+}
+
+.blockTotal {
+  display: flex;
+  width: 100%;
+  padding: 1rem 1.5rem;
+}
+
+.infoProducts {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 60%;
+}
+
+.title {
+  font-size: $h6;
+  font-weight: bolder;
+  font-family: 'Bangla MN', sans-serif;
+  white-space: normal;
+}
+
+.quantity {
+  color: $quinquenary;
+  margin-right: 0.5rem;
+}
+
+.totalPrice {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: $h6;
+  font-family: 'Abeezee', sans-serif;
+}
+
+.total {
+  font-weight: bolder;
+  font-family: 'Bangla MN', sans-serif;
+}
+
+.price {
+  margin-top: 0.3rem;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  width: 100%;
+  margin-top: 2rem;
+  padding: $paddingButton;
+  background-color: $accent;
+  color: $background;
+  border: none;
+  border-radius: $border1;
+  font-size: $h5;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $text;
+  }
+}

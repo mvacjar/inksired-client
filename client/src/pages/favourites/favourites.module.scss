@@ -1,0 +1,22 @@
+@import '@/scss/index.scss';
+
+.bodyContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: $h3;
+}
+
+.wishlistContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3rem;
+}

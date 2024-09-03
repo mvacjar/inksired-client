@@ -1,0 +1,85 @@
+@import '@/scss/index.scss';
+
+.orderContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 50vw;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  background-color: $quaternary;
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px 0 rgba($primary, 0.1);
+  transition: all 0.3s ease;
+  box-shadow: 0px 1px 5px rgba(81, 81, 81, 0.68);
+
+  &:hover {
+    border: 2px solid $primary;
+  }
+}
+
+.cover {
+  border-radius: $border1;
+}
+
+.title {
+  font-family: 'Bangla MN', sans-serif;
+  font-weight: bolder;
+}
+
+.totalPayment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-weight: bolder;
+  font-size: 1.1rem;
+}
+
+.modalContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  gap: 1rem;
+  border-bottom: 1px solid $primary;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.quantityContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.quantity {
+  margin-right: 0.5rem;
+}
+
+.address {
+  margin: 1.5rem 0;
+  border-bottom: 1px solid $border1;
+  background-color: $tertiary;
+  padding: 20px;
+  border-radius: $border1;
+
+  .title {
+    font-weight: bolder;
+    font-size: $h6;
+  }
+
+  .addressInfo {
+    color: $text;
+    font-size: $h6;
+  }
+}
+
+.total p {
+  text-align: right;
+  font-size: $h5;
+  color: $text;
+  font-family: 'AbeeZee', sans-serif;
+}

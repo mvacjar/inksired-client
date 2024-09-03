@@ -1,0 +1,23 @@
+@import '@/scss/index.scss';
+
+.checkoutContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+@media (max-width: 968px) {
+  .checkoutContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .basket {
+      width: 100%;
+    }
+
+    .resume {
+      width: 100%;
+    }
+  }
+}

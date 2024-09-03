@@ -1,0 +1,119 @@
+@import '@/scss/index.scss';
+
+.footerWrapper {
+  background-color: $quaternary;
+  border-radius: $border2;
+  color: $background;
+  padding: 2rem;
+  margin: 2rem 0;
+  width: 91vw;
+  z-index: 10;
+  box-shadow: 5px 5px 10px #866e522e;
+}
+
+.titleContainer {
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.line {
+  display: block;
+  text-decoration: none;
+  color: $background;
+  border-bottom: 1px solid #fffbef66;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.linksContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0;
+  font-weight: bolder;
+}
+
+.link {
+  color: $tertiary;
+  &:hover {
+    text-decoration: underline;
+    color: $background;
+  }
+}
+
+.iconsContainer {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.icon {
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+  &:active {
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+.signed {
+  text-align: center;
+  font-size: $h6;
+  margin: 1.5rem 0;
+  line-height: 0;
+}
+
+.copyright {
+  text-align: center;
+  font-size: $small;
+  margin: 1.5rem 0 0;
+  color: $tertiary;
+  font-family: 'ABeeZee';
+  font-weight: bolder;
+}
+
+@media (max-width: 1600px) {
+  .footerWrapper {
+    width: 89vw;
+  }
+}
+
+@media (max-width: 1300px) {
+  .footerWrapper {
+    width: 86vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  .footerWrapper {
+    width: 82vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerWrapper {
+    width: 90vw;
+    margin: 1rem;
+  }
+
+  .signed,
+  .copyright {
+    white-space: wrap;
+    line-height: 2;
+  }
+}
+
+@media (max-width: 568px) {
+  .footerWrapper {
+    width: 100%;
+    margin: 0 3rem;
+  }
+}

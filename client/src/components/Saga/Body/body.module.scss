@@ -1,0 +1,114 @@
+@import '@/scss/index.scss';
+
+.bodyContainer {
+  display: flex;
+  width: 80%;
+  padding: 0 1rem;
+  margin-left: 2rem;
+}
+
+.authorContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.booksContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.bookContainer {
+  margin: 1rem 0 1rem 2rem;
+  z-index: 10;
+  max-width: 200px;
+}
+
+.bookCover {
+  max-width: 200px;
+  max-height: 300px;
+  border-radius: $border1;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  gap: 2rem;
+  box-shadow: 5px 5px 10px #866e5253;
+}
+
+.book {
+  > div {
+    position: relative;
+
+    > img {
+      transition: opacity 0.3s ease;
+    }
+
+    .discount {
+      position: absolute;
+      top: -0.5rem;
+      right: -1rem;
+    }
+  }
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleOrder {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.titleBook {
+  font-size: $h6;
+  white-space: wrap;
+  margin-top: 10px;
+}
+
+.orderSaga {
+  color: $quinquenary;
+}
+
+.authorBook {
+  font-size: $small;
+  color: $primary;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.originalPrice {
+  font-size: $small;
+  color: $quinquenary;
+  text-decoration: line-through;
+}
+
+.discountedPrice {
+  font-size: $h6;
+  color: $accent;
+  font-weight: bolder;
+}
+
+.regularPrice {
+  font-weight: bolder;
+  font-size: 0.9rem;
+  font-size: $h6;
+}
+
+@media (max-width: 768px) {
+  .bodyContainer {
+    margin-left: 3rem;
+  }
+}

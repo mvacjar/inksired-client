@@ -1,0 +1,50 @@
+@import '@/scss/index.scss';
+
+.paymentTitle {
+  margin: 3rem 0 2rem;
+}
+
+.addressContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.addressInfo {
+  flex: 1 1 48%;
+  width: 50%;
+  margin-top: rem;
+  padding: 3rem 2rem 3rem 3rem;
+  background-color: $quaternary;
+  border-radius: $border2;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 10px rgba(81, 81, 81, 0.286);
+  white-space: normal;
+  &:hover {
+    border: 2px solid $primary;
+  }
+  &.active {
+    border: 2px solid $primary;
+  }
+}
+
+.title {
+  font-size: $h5;
+}
+
+.name,
+.address,
+.city,
+.state,
+.zip,
+.country {
+  font-size: $h6;
+  line-height: 1.5;
+}
+
+.addressGeo {
+  display: flex;
+  flex-direction: row;
+}
