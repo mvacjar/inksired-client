@@ -37,6 +37,10 @@ export default function NavVertical() {
     router.push('/');
   };
 
+  const toLogin = () => {
+    router.push('/join/sign-in');
+  };
+
   return (
     <div className={styles.navWrapper}>
       <div className={styles.peakSuperiorContainerNotMove}>
@@ -85,7 +89,22 @@ export default function NavVertical() {
                 title='Home Page'
               />
             </Link>
-            <Link href='/forum' className={styles.link}>
+            {!user ? (
+              <Link href='/' className={styles.link}>
+                <Image
+                  src='/images/login.svg'
+                  width={35}
+                  height={35}
+                  alt='icon-menu'
+                  className={styles.icon}
+                  onClick={toLogin}
+                  title='Sign In'
+                />
+              </Link>
+            ) : (
+              ''
+            )}
+            {/* <Link href='/forum' className={styles.link}>
               <Image
                 src='/images/pen.svg'
                 width={35}
@@ -94,8 +113,8 @@ export default function NavVertical() {
                 className={styles.icon}
                 title='Forum'
               />
-            </Link>
-            <Link href='/bookshelf' className={styles.link}>
+            </Link> */}
+            {/* <Link href='/bookshelf' className={styles.link}>
               {user ? (
                 <Image
                   src='/images/shelf.svg'
@@ -108,16 +127,16 @@ export default function NavVertical() {
               ) : (
                 ''
               )}
-            </Link>
+            </Link> */}
             <Link href='/favourites' className={styles.link}>
               {user ? (
                 <Image
-                  src='/images/star.svg'
+                  src='/images/shelf.svg'
                   width={35}
                   height={35}
                   alt='icon-menu'
                   className={styles.icon}
-                  title='My Favourites'
+                  title='My Wishlist'
                 />
               ) : (
                 ''
@@ -135,7 +154,7 @@ export default function NavVertical() {
                   height={35}
                   alt='icon-menu'
                   className={styles.icon}
-                  title='Settings'
+                  title='My Settings'
                 />
               ) : (
                 ''

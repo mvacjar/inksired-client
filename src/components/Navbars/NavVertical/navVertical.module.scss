@@ -111,11 +111,11 @@
 .linksContainer {
   display: flex;
   flex-direction: column;
-  margin-top: 5rem;
+  padding-top: 5rem;
 }
 
 .icon {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   filter: drop-shadow(5px 2px 8px #010100);
   transition: transform ease 0.2s;
   &:hover {
@@ -233,5 +233,13 @@
   .peakInferiorContainer img {
     width: 64px;
     padding-bottom: 0.9rem;
+  }
+
+  .linksContainer {
+    padding-top: 5rem;
+  }
+
+  .icon {
+    margin: 1rem 0;
   }
 }
