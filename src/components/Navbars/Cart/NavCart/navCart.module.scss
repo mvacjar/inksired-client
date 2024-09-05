@@ -59,6 +59,22 @@
 
 @media (max-width: 568px) {
   .navCartContainer {
-    top: -3rem;
+    height: 30vh;
+  }
+
+  .arrowContainer {
+    top: 4rem;
+    margin-left: 1rem;
+    width: 100px;
+  }
+
+  .logoContainer {
+    top: 3.3rem;
+    margin-right: 1rem;
+  }
+
+  .logo {
+    top: 0rem;
+    width: 100px;
   }
 }

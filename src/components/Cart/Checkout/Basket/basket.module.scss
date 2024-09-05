@@ -122,3 +122,12 @@
     border-bottom: 2px solid $secondary;
   }
 }
+
+@media (max-width: 568px) {
+  .quantity {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

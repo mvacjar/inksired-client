@@ -1,5 +1,4 @@
 import styles from './basket.module.scss';
-import { useState } from 'react';
 import { map } from 'lodash';
 import Image from 'next/image';
 import Link from 'next/link';
