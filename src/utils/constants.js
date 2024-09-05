@@ -1,5 +1,3 @@
-import { ENV } from './env';
-
 export const ENV = {
   SERVER_HOST: 'https://inksired-server-production.up.railway.app',
   API_URL: 'https://inksired-server-production.up.railway.app/api',
