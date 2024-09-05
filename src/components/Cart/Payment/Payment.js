@@ -9,7 +9,7 @@ import { Elements } from '@stripe/react-stripe-js';
 import { ENV } from '@/utils';
 import { PaymentSumary } from './PaymentSummary';
 
-const stripeInit = loadStripe(ENV.STRIPE_SECRET);
+const stripeInit = loadStripe(ENV.NEXT_PUBLIC_STRIPE_SECRET);
 console.log('stripeInit', stripeInit);
 
 export function Payment(props) {
