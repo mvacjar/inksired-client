@@ -243,3 +243,36 @@
     margin: 1rem 0;
   }
 }
+
+@media (max-width: 568px) {
+  .logo {
+    margin-top: 0.7rem;
+  }
+
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-65%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-65%);
+    }
+  }
+
+  .linksContainer {
+    padding-top: 0rem;
+  }
+
+  .icon {
+    margin: 0.6rem 0;
+    padding: 0.1rem;
+  }
+}

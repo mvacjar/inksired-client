@@ -13,7 +13,6 @@ export function ChooseIcon() {
   const { user, updateUser } = useAuth();
   const [icons, setIcons] = useState(null);
   const [selectedIconUrl, setSelectedIconUrl] = useState(null);
-  console.log('user:', user);
 
   // Formik setup
   const formik = useFormik({

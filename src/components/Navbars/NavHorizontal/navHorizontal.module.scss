@@ -146,24 +146,49 @@
 }
 
 @media (max-width: 568px) {
+  .narbarContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .imageWrapper {
+    height: 15vh;
+    margin-top: 0.5rem;
+  }
+
+  .searchForm {
+    margin-right: 0rem;
+    margin-top: 2rem;
+  }
+
   .searchInput {
     width: 50vw;
-    left: 6.5rem;
+    left: 6rem;
   }
+
   .searchIconContainer {
-    width: 28vw;
-    .xIcon {
-      width: 15px;
-      height: 15px;
-    }
-    .searchIcon {
-      width: 22px;
-      height: 22px;
-      padding-top: 0.3rem;
-    }
+    display: none;
+  }
+
+  .xIcon {
+    display: none;
+  }
+
+  .searchIcon {
+    display: none;
   }
 
   .cartIconContainer {
-    margin-right: 1rem;
+    margin-right: 1.5rem;
+    margin-top: 0.4rem;
+  }
+
+  .buttonContainer {
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+  }
+
+  .buttonUp {
+    display: none;
   }
 }

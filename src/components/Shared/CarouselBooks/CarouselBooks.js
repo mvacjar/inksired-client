@@ -33,7 +33,6 @@ export function CarouselBooks({
       try {
         const response = await book.obentoBooks({ limit, literaryGenresId });
         setBooksByGenre(response.data);
-        console.log(response.data);
       } catch (error) {
         console.error(error);
       }

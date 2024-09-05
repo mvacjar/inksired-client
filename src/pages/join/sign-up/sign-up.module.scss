@@ -10,7 +10,7 @@
   z-index: 10;
   box-shadow: 0px 5px 15px 0px #40516a4f;
   max-width: 55rem;
-  height: 65vh;
+  height: auto;
 }
 
 // Container
@@ -20,6 +20,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  height: 60vh;
 }
 
 .articleSignUp {
@@ -80,6 +81,7 @@
 
   .containerSignUp {
     flex-direction: column;
+    height: 80vh;
   }
 
   .titleSignUp {
@@ -106,10 +108,21 @@
 @media (max-width: 568px) {
   .wrapperSign {
     min-width: 16rem;
+    margin-top: 3rem;
+  }
+
+  .containerSignUp {
+    flex-direction: column;
+    height: 80vh;
   }
 
   .titleSignUp {
     font-size: $small;
     text-align: center;
+    margin-top: 1rem;
+  }
+
+  .paragraphContainer {
+    padding-top: 0rem;
   }
 }

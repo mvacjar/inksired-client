@@ -46,7 +46,6 @@ export default function RegisterForm() {
       try {
         const resultIcon = await iconCtrl.getAllIcons();
         setIcons(resultIcon.data);
-        console.log('Icons:', resultIcon.data);
       } catch (error) {
         console.error('Error fetching icons:', error);
       }
