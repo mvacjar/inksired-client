@@ -198,6 +198,7 @@ export default function NavVertical() {
               alt='peak'
               width={80}
               height={60}
+              className={styles.peakInferior}
             />
           </div>
         </div>

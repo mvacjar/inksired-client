@@ -48,10 +48,10 @@ export function NoveltyBooks(props) {
             priority
           />
         </div>
-        <Separator height={50} />
         <div className={styles.titlePublishedContainer}>
           <h1 className={styles.titlePublished}>Novelty</h1>
         </div>
+        <Separator height={30} />
         <div className={styles.wrapper}>
           <div className={styles.carousel}>
             <div className={styles.cards}>

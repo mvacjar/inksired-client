@@ -127,6 +127,22 @@ export function Body(props) {
           </div>
 
           <p className={styles.synopsis}>{bookInfo.synopsis}</p>
+          <div>
+            <p className={styles.language}>
+              Page number:&nbsp;
+              <span className={styles.language}>{bookInfo.page_number}</span>
+            </p>
+            <p className={styles.publication}>
+              Publication date:&nbsp;
+              <span className={styles.publication}>
+                {bookInfo.publication_date}
+              </span>
+            </p>
+            <p className={styles.publisher}>
+              Publisher:&nbsp;
+              <span className={styles.publisher}>{bookInfo.publisher}</span>
+            </p>
+          </div>
 
           <div className={styles.genresContainer}>
             {bookInfo.literary_genres.data.map((genre) => (
