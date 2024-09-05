@@ -146,3 +146,37 @@
     transform: scale(0.95);
   }
 }
+
+// Buy button
+
+.btnContainer {
+  display: flex;
+}
+
+.buyBtn {
+  width: 100%;
+  border-radius: $border2;
+  padding: $paddingButton;
+  background-color: $primary;
+  color: $background;
+  margin-top: 0.5rem;
+  transition: transform 0.1s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+@media (max-width: 568px) {
+  .wrapper {
+    margin: 0 0rem;
+    justify-content: center;
+  }
+
+  .bookContainer {
+    margin: 1rem 0;
+  }
+}

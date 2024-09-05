@@ -115,7 +115,7 @@
 }
 
 .icon {
-  margin: 1.5rem 0;
+  margin-bottom: 1.5rem;
   filter: drop-shadow(5px 2px 8px #010100);
   transition: transform ease 0.2s;
   &:hover {
@@ -216,7 +216,6 @@
   }
 
   .titleNav {
-    width: 80;
     height: auto;
   }
 
@@ -251,7 +250,7 @@
 
   @keyframes slideDown {
     0% {
-      transform: translateY(-65%);
+      transform: translateY(-70%);
     }
     100% {
       transform: translateY(0);
@@ -263,8 +262,40 @@
       transform: translateY(0);
     }
     100% {
-      transform: translateY(-65%);
+      transform: translateY(-70%);
     }
+  }
+
+  .logoContainer {
+    position: fixed;
+    padding-left: 0.8rem;
+
+    top: 1rem;
+  }
+
+  .navbar {
+    margin-left: 0.5rem;
+    max-width: 3.5rem;
+    height: 90%;
+  }
+
+  .peakSuperiorContainerNotMove img {
+    width: 63px;
+    margin-top: 0.3rem;
+    margin-left: -0.5rem;
+  }
+
+  .peakSuperiorContainerMove img {
+    width: 63px;
+    margin-top: 0.3rem;
+    margin-left: 0rem;
+    filter: drop-shadow(0px 0px 0px #3d322800);
+  }
+
+  .peakInferiorContainer img {
+    width: 56px;
+    margin-top: 0rem;
+    margin-bottom: 0.4rem;
   }
 
   .linksContainer {
@@ -274,5 +305,38 @@
   .icon {
     margin: 0.6rem 0;
     padding: 0.1rem;
+  }
+
+  .titleNavContainer {
+    margin-bottom: 1.5rem;
+    padding-right: 0rem;
+  }
+
+  .titleNav {
+    width: 70px;
+  }
+}
+
+@media (max-height: 500px) {
+  .navbar {
+    height: 130%;
+  }
+
+  .linksContainer {
+    padding-top: 0rem;
+    margin-top: -1rem;
+  }
+
+  .peakSuperiorContainerNotMove img {
+    width: 63px;
+    margin-top: 0.25rem;
+    margin-left: -0.5rem;
+  }
+
+  .peakSuperiorContainerMove img {
+    width: 63px;
+    margin-top: 0.25rem;
+    margin-left: 0rem;
+    filter: drop-shadow(0px 0px 0px #3d322800);
   }
 }

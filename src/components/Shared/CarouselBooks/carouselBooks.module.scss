@@ -113,7 +113,7 @@
 // Cover
 
 .bookContainer {
-  margin: 1rem 0 1rem 2rem;
+  margin: 1rem 0 0rem 2rem;
   z-index: 10;
   max-width: 200px;
 }
@@ -154,7 +154,6 @@
 .titleBook {
   font-size: $h6;
   white-space: wrap;
-  margin-top: 10px;
 }
 
 .author {
@@ -202,6 +201,29 @@
   font-weight: bolder;
   font-size: 0.9rem;
   font-size: $h6;
+}
+
+// Buy button
+
+.btnContainer {
+  display: flex;
+}
+
+.buyBtn {
+  width: 100%;
+  border-radius: $border2;
+  padding: $paddingButton;
+  background-color: $primary;
+  color: $background;
+  margin-top: 0.5rem;
+  transition: transform 0.1s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 // Arrows
@@ -270,4 +292,21 @@
     rgba(255, 251, 239, 0) 0%,
     rgba(255, 251, 239, 0.8) 70%
   );
+}
+
+@media (max-width: 568px) {
+  .title {
+    font-size: $h4;
+    white-space: wrap;
+  }
+
+  .booksWrapper {
+    padding: 1rem 0;
+  }
+
+  .bookContainer {
+    margin: 1rem 1.5rem 1rem 1rem;
+    z-index: 10;
+    max-width: 200px;
+  }
 }

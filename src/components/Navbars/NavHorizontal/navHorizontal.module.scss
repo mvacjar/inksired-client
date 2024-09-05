@@ -174,10 +174,6 @@
     display: none;
   }
 
-  .searchIcon {
-    display: none;
-  }
-
   .cartIconContainer {
     margin-right: 1.5rem;
     margin-top: 0.4rem;
@@ -190,5 +186,11 @@
 
   .buttonUp {
     display: none;
+  }
+}
+
+@media (max-height: 500px) {
+  .imageWrapper {
+    height: 20vh;
   }
 }

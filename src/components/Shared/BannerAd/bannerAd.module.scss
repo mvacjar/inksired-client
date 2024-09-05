@@ -52,14 +52,29 @@
   padding: $paddingButton;
   border-radius: $border2;
   font-size: $small;
+
+  border: 2px solid $background;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  animation: heartbeat 1s infinite;
+
   &:hover {
     transform: scale(1.05);
     border: 2px solid $accent;
   }
+
   &:active {
     transform: scale(0.95);
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
   }
 }
 

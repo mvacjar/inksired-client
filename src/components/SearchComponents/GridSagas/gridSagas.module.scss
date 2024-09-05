@@ -30,9 +30,12 @@
 // Book Cover
 
 .bookContainer {
-  margin: 1rem 0 1rem 2rem;
+  margin: 1rem 0 0rem 2rem;
   z-index: 10;
   max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .bookCover {
@@ -141,5 +144,47 @@
   }
   &:active {
     transform: scale(0.95);
+  }
+}
+
+// Buy button
+
+.btnContainer {
+  display: flex;
+}
+
+.buyBtn {
+  width: 100%;
+  border-radius: $border2;
+  padding: $paddingButton;
+  background-color: $primary;
+  color: $background;
+  margin-top: 0.5rem;
+  transition: transform 0.1s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+@media (max-width: 568px) {
+  .infoTextContainer {
+    margin-left: 0;
+  }
+
+  .wrapper {
+    justify-content: center;
+  }
+
+  .bookContainer {
+    margin: 1rem 0;
+  }
+
+  .sagaTitle {
+    font-size: $h4;
+    white-space: wrap;
   }
 }

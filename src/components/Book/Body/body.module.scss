@@ -105,6 +105,7 @@
 }
 
 .buyBtn {
+  width: 100%;
   border-radius: $border2;
   padding: $paddingButton;
   background-color: $primary;
@@ -207,6 +208,13 @@
 .synopsis {
   line-height: 1.5;
   margin-bottom: 0.5rem;
+}
+
+.language,
+.publication,
+.publisher {
+  color: $quinquenary;
+  margin-bottom: 0.3rem;
 }
 
 .genresContainer {

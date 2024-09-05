@@ -56,3 +56,9 @@
     transform: scale(0.95);
   }
 }
+
+@media (max-width: 568px) {
+  .navCartContainer {
+    top: -3rem;
+  }
+}

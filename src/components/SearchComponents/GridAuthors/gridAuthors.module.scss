@@ -68,7 +68,7 @@
 // Image Book
 
 .bookContainer {
-  margin: 1rem 1rem 4rem 0rem;
+  margin: 1rem 1rem 1rem 0rem;
   z-index: 10;
   max-width: 200px;
   display: flex;
@@ -116,6 +116,10 @@
   width: 100%;
   justify-content: flex-start;
   align-items: centet;
+}
+
+.description {
+  margin: 1rem 0;
 }
 
 .titleBook {
@@ -179,5 +183,51 @@
   }
   &:active {
     transform: scale(0.95);
+  }
+}
+
+// Buy button
+
+.btnContainer {
+  display: flex;
+}
+
+.buyBtn {
+  width: 100%;
+  border-radius: $border2;
+  padding: $paddingButton;
+  background-color: $primary;
+  color: $background;
+  margin-top: 0.5rem;
+  transition: transform 0.1s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+@media (max-width: 868px) {
+  .name {
+    font-size: $h4;
+  }
+
+  .booksContainer {
+    justify-content: flex-start;
+    gap: 0 1rem;
+  }
+
+  .bookContainer {
+    margin: 1rem 1rem 0rem 0rem;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 568px) {
+  .booksContainer {
+    justify-content: center;
+    gap: 1rem 0rem;
   }
 }

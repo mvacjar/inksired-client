@@ -91,7 +91,6 @@
   position: relative;
   min-width: 100px;
   min-height: 250px;
-
   transition: transform 0.3s ease-in-out;
 
   &:hover {
@@ -149,34 +148,6 @@
       transform: scale(0.95);
     }
   }
-}
-
-// Prices
-
-.priceContainer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-
-.originalPrice {
-  font-size: $small;
-  color: $quinquenary;
-  text-decoration: line-through;
-}
-
-.discountedPrice {
-  font-size: $h6;
-  color: $accent;
-  font-weight: bolder;
-}
-
-.regularPrice {
-  font-weight: bolder;
-  font-size: 0.9rem;
-  font-size: $h6;
 }
 
 @media (max-width: 1300px) {
@@ -324,8 +295,41 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(10, 1fr);
-    padding: 4rem 1rem 4rem 4rem;
+    padding: 3rem 1rem 4rem 3.5rem;
     width: 90vw;
-    height: 160vh;
+    height: 220vh;
+    grid-gap: 1rem;
+  }
+
+  .title {
+    font-size: $h4;
+    &::before {
+      content: '';
+      height: 18%;
+      width: 72%;
+      display: block;
+      z-index: -5;
+      opacity: 30%;
+      position: absolute;
+      transition: all 0.3s ease;
+      background-color: $accent;
+    }
+  }
+
+  .image1,
+  .image2,
+  .image3,
+  .image4,
+  .image5,
+  .image6,
+  .image7,
+  .image8,
+  .image9,
+  .image10 {
+    border-radius: $border2;
+    position: relative;
+    width: 140px;
+    max-height: 200px;
+    transition: transform 0.3s ease-in-out;
   }
 }

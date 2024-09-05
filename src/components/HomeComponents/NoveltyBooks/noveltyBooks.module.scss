@@ -282,10 +282,13 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 568px) {
+  .titlePublished {
+    font-size: $h4;
+  }
   .card {
-    width: 220px;
-    height: 360px;
+    width: 180px;
+    height: 300px;
     &:hover .info {
       opacity: 1;
       width: 190px;

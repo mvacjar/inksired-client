@@ -14,3 +14,15 @@
   font-size: $h5;
   white-space: wrap;
 }
+
+@media (max-width: 868px) {
+  .containerBody {
+    padding: 2rem 2rem 0 5rem;
+  }
+}
+
+@media (max-width: 568px) {
+  .containerBody {
+    padding: 2rem 2rem 0 4rem;
+  }
+}
