@@ -17,5 +17,5 @@ export const ENV = {
   },
   TOKEN: 'token',
   CART: 'cart',
-  STRIPE_TOKEN: process.env.STRIPE_SECRET,
+  STRIPE_SECRET: process.env.STRIPE_SECRET,
 };

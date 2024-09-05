@@ -9,7 +9,7 @@ import { Elements } from '@stripe/react-stripe-js';
 import { ENV } from '@/utils';
 import { PaymentSumary } from './PaymentSummary';
 
-const stripeInit = loadStripe(ENV.STRIPE_TOKEN);
+const stripeInit = loadStripe(ENV.STRIPE_SECRET);
 
 export function Payment(props) {
   const [totals, setTotals] = useState(null);
