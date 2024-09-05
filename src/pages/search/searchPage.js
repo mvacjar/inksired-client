@@ -21,7 +21,7 @@ export default function searchPage(props) {
     <>
       <Seo title='Search' />
       <BasicLayout />
-      <Separator height={150} />
+      <Separator height={100} />
       <div className={styles.containerBody}>
         {hasResultBooks ? (
           <>
@@ -36,7 +36,7 @@ export default function searchPage(props) {
           </>
         ) : hasResultAuthors ? (
           <>
-            <SearchComponents.GridAuthors authors={authors} />
+            <SearchComponents.GridAuthors authors={authors} books={books} />
             <Separator height={50} />
             <div className={styles.container}>
               <Pagination
@@ -47,7 +47,7 @@ export default function searchPage(props) {
           </>
         ) : hasResultSagas ? (
           <>
-            <SearchComponents.GridSagas sagas={sagas} />
+            <SearchComponents.GridSagas sagas={sagas} books={books} />
             <Separator height={50} />
             <div className={styles.container}>
               <Pagination

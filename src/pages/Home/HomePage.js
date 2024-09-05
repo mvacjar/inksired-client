@@ -32,20 +32,21 @@ export default function HomePage() {
 
         <article className={styles.mainContainer}>
           <Separator height={150} />
+
           <section className={styles.carouselContainer}>
             <HomeComponents.CarouselGenres />
           </section>
-
           <Separator height={50} />
+
           <section className={styles.noveltyContainer}>
             <HomeComponents.NoveltyBooks />
           </section>
-          <Separator height={100} />
+          <Separator height={60} />
 
           <section className={styles.obentoContainer}>
             <HomeComponents.ObentoBooks title={`Read the latest!`} />
           </section>
-          <Separator height={100} />
+          <Separator height={40} />
 
           <section className={styles.bannerAdContainer}>
             <BannerAd
@@ -56,17 +57,15 @@ export default function HomePage() {
               image='/images/imgAd.png'
             />
           </section>
-          <Separator height={100} />
+          <Separator height={50} />
 
           <section className={styles.carouselBooksContainer}>
             <CarouselBooks genreId={2} title='Latest Fantasy Books' />
           </section>
-          <Separator height={50} />
-
           <section className={styles.carouselBooksContainer}>
             <CarouselBooks genreId={16} title='Latest Thriller Books' />
           </section>
-          <Separator height={50} />
+          <Separator height={30} />
 
           <section className={styles.barInfoContainer}>
             <BarInfo />
