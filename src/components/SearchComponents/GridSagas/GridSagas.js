@@ -19,12 +19,10 @@ export function GridSagas({ sagas }) {
               className={styles.sagaContainer}
             >
               <div className={styles.infoTextContainer}>
-                {/* Renderizar el título de la saga */}
                 <h1 className={styles.sagaTitle}>
                   Saga: {saga.attributes.saga_title}
                 </h1>
 
-                {/* Mapear y mostrar los autores de la saga */}
                 <h3 className={styles.sagaAuthor}>
                   {authors.map((author, authorIndex) => (
                     <Link

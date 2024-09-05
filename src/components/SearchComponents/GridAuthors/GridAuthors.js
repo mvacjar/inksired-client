@@ -1,25 +1,13 @@
 import styles from './gridAuthors.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
 import { Label, Separator } from '@/components/Shared';
 import { map, groupBy, partition } from 'lodash';
 import { CalcDiscountPrice } from '@/utils';
 import { WishListIcon } from '@/components/Shared';
-import CircularProgress from '@mui/material/CircularProgress';
-import { useCart } from '@/hooks';
 
 export function GridAuthors(props) {
-  const { authors, books } = props;
-  const [loading, setLoading] = useState(false);
-  const { addCart } = useCart();
-  const addCartWrapper = () => {
-    setLoading(true);
-    addCart(books.id);
-    setTimeout(() => {
-      setLoading(false);
-    }, 500);
-  };
+  const { authors } = props;
 
   return (
     <section className={styles.authorContainer}>
@@ -108,21 +96,6 @@ export function GridAuthors(props) {
                               </span>
                             )}
                           </div>
-                          <div className={styles.btnContainer}>
-                            <button
-                              className={`${styles.buyBtn} ${
-                                loading ? styles.loading : ''
-                              }`}
-                              onClick={addCartWrapper}
-                              disabled={loading}
-                            >
-                              {loading ? (
-                                <CircularProgress size={20} thickness={4} />
-                              ) : (
-                                'Add to bag'
-                              )}
-                            </button>
-                          </div>
                         </div>
                       </div>
                     );
@@ -208,21 +181,6 @@ export function GridAuthors(props) {
                                     {originalPrice.toFixed(2)}€
                                   </span>
                                 )}
-                              </div>
-                              <div className={styles.btnContainer}>
-                                <button
-                                  className={`${styles.buyBtn} ${
-                                    loading ? styles.loading : ''
-                                  }`}
-                                  onClick={addCartWrapper}
-                                  disabled={loading}
-                                >
-                                  {loading ? (
-                                    <CircularProgress size={20} thickness={4} />
-                                  ) : (
-                                    'Add to bag'
-                                  )}
-                                </button>
                               </div>
                             </div>
                           </div>
