@@ -1,7 +1,3 @@
-import dotenv from 'dotenv';
-
-dotenv.config();
-
 export const ENV = {
   SERVER_HOST: 'https://inksired-server-production.up.railway.app',
   API_URL: 'https://inksired-server-production.up.railway.app/api',
