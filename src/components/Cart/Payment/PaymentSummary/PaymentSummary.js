@@ -1,9 +1,8 @@
 import styles from './paymentSummary.module.scss';
 import { useEffect, useState } from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
-import { forEach, set } from 'lodash';
+import { forEach } from 'lodash';
 import { CalcDiscountPrice } from '@/utils';
-import { useRouter } from 'next/router';
 import { useStripe, useElements } from '@stripe/react-stripe-js';
 import { CardElement } from '@stripe/react-stripe-js';
 import { useAuth, useCart } from '@/hooks';
@@ -24,7 +23,6 @@ export function PaymentSumary(props) {
   const stripe = useStripe();
   const elements = useElements();
   const { user } = useAuth();
-  const router = useRouter();
 
   const cardStyles = {
     style: {

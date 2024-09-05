@@ -103,7 +103,7 @@ export default function InfoAccount() {
             <h3 className={styles.titleName}>Name: {user.name}</h3>
             <p>e-mail: {user.email}</p>
             <p>
-              Member since:
+              Member since:&nbsp;
               {DateTime.fromISO(user.createdAt, { locale: 'en' }).toFormat(
                 'dd MMMM yyyy'
               )}

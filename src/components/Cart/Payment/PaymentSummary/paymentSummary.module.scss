@@ -48,7 +48,17 @@
   width: 60%;
 }
 
-.title {
+.infoDelivery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0 0 1rem;
+  width: 90%;
+}
+
+.title,
+.delivery {
   font-size: $h6;
   font-weight: bolder;
   font-family: 'Bangla MN', sans-serif;
