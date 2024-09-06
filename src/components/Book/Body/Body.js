@@ -22,7 +22,13 @@ export function Body(props) {
   };
 
   const hasSagaNumber = bookInfo.order_in_saga !== 0;
-  const hasSaga = bookInfo.sagas?.data?.attributes?.saga_title ?? '';
+  const saga = bookInfo?.sagas?.data?.attributes;
+  const sagaTitle = saga?.saga_title ?? '';
+  const sagaName = saga?.saga_name ?? '';
+
+  // Depuración: Imprime bookInfo y saga
+  console.log('bookInfo:', bookInfo);
+  console.log('saga:', saga);
 
   const validOriginalPrice =
     typeof originalPrice === 'number' && !isNaN(originalPrice);
@@ -106,24 +112,16 @@ export function Body(props) {
             </h3>
           </Link>
           <div className={styles.sagaWrapper}>
-            <Link href={`/saga/${bookInfo.sagas?.data?.attributes?.saga_name}`}>
-              <div className={styles.sagaContainer}>
-                {hasSaga ? (
-                  <>
-                    <span className={styles.sagaPretitle}>Saga:</span>{' '}
-                    <span className={styles.sagaTitle}>
-                      {bookInfo.sagas?.data?.attributes?.saga_title}
-                    </span>
-                  </>
-                ) : (
-                  <p style={{ display: 'none' }}></p>
-                )}
-              </div>
-            </Link>
-
-            <p className={styles.sagaOrder}>
-              {hasSagaNumber ? `#${bookInfo.order_in_saga}` : ''}
-            </p>
+            {sagaName ? (
+              <>
+                <span className={styles.sagaOrder}>
+                  #{bookInfo.order_in_saga}&nbsp;
+                </span>
+                <Link href={`/saga/${sagaName}`} className={styles.sagaLink}>
+                  <span className={styles.sagaTitle}>{sagaTitle}</span>
+                </Link>
+              </>
+            ) : null}
           </div>
 
           <p className={styles.synopsis}>{bookInfo.synopsis}</p>
