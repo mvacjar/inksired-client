@@ -46,7 +46,7 @@ export default function HomePage() {
           <section className={styles.obentoContainer}>
             <HomeComponents.ObentoBooks title={`Read the latest!`} />
           </section>
-          <Separator height={40} />
+          <Separator height={100} />
 
           <section className={styles.bannerAdContainer}>
             <BannerAd

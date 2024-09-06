@@ -66,14 +66,21 @@ export function GridBooks(props) {
                     ))
                   : 'Unknown Author'}
 
-                <div className={styles.sagaContainer}>
-                  <span className={styles.sagaOrder}>
-                    #{book.attributes.order_in_saga}&nbsp;
-                  </span>
-                  <Link href={`/saga/${sagaName}`} className={styles.sagaLink}>
-                    <span className={styles.sagaTitle}>{sagaTitle}</span>
-                  </Link>
-                </div>
+                {sagaName && (
+                  <>
+                    <div className={styles.sagaContainer}>
+                      <span className={styles.sagaOrder}>
+                        #{book.attributes.order_in_saga}&nbsp;
+                      </span>
+                      <Link
+                        href={`/saga/${sagaName}`}
+                        className={styles.sagaLink}
+                      >
+                        <span className={styles.sagaTitle}>{sagaTitle}</span>
+                      </Link>
+                    </div>
+                  </>
+                )}
                 <div className={styles.priceContainer}>
                   {discount > 0 ? (
                     <>
