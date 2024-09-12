@@ -63,9 +63,9 @@
 
 .card {
   position: absolute;
-  width: 300px;
+  width: 330px;
   height: 500px;
-  border-radius: $border2;
+  border-radius: $border1;
   transition: transform 1s ease, opacity 0.6s ease;
   cursor: pointer;
   backface-visibility: hidden;
@@ -74,7 +74,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 
-  &:hover .info {
+  &:hover .infoBookContainer {
     opacity: 1;
     width: 300px;
     height: 470px;
@@ -133,7 +133,7 @@
   transition: filter 0.5s ease;
 }
 
-.info {
+.infoBookContainer {
   position: relative;
   bottom: 0;
   left: 0;
@@ -144,12 +144,12 @@
   transition: opacity 0.3s ease;
 }
 
-.card.active:hover .info {
+.card.active:hover .infoBookContainer {
   opacity: 1;
 }
 
-.card.prev .info,
-.card.next .info {
+.card.prev .infoBookContainer,
+.card.next .infoBookContainer {
   display: none;
 }
 
@@ -161,10 +161,9 @@
 
 .titleCover {
   color: $tertiary;
-  line-height: 2.5;
   text-shadow: 1px 1px 6px #000000;
-  padding: 0rem 1rem;
-  padding-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  white-space: normal;
 }
 
 .synopsisContainer {
@@ -199,8 +198,8 @@
 
 .discount {
   position: relative;
-  bottom: 0rem;
-  left: -1rem;
+  bottom: 1rem;
+  left: -2.5rem;
 }
 
 .priceContainer {
@@ -256,9 +255,9 @@
   .card {
     width: 200px;
     height: 310px;
-    &:hover .info {
+    &:hover .infoBookContainer {
       opacity: 1;
-      width: 190px;
+      width: 200px;
       height: 300px;
       padding: 0rem 1.5rem 0 0;
       overflow-y: auto;
@@ -283,18 +282,29 @@
 }
 
 @media (max-width: 568px) {
+  .wrapper {
+    margin-bottom: 1.5rem;
+  }
+
   .titlePublished {
     font-size: $h4;
   }
   .card {
-    width: 180px;
+    width: 200px;
     height: 300px;
-    &:hover .info {
+    &:hover {
       opacity: 1;
-      width: 190px;
+      width: 200px;
       height: 300px;
       padding: 0rem 1.5rem 0 0;
       overflow-y: auto;
     }
+    .infoBookContainer {
+      display: none;
+    }
+  }
+
+  .card.active:hover .cover {
+    filter: none;
   }
 }

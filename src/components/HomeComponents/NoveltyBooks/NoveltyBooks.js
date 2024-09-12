@@ -88,7 +88,7 @@ export function NoveltyBooks(props) {
                       />
                     </div>
                     <Link href={`/book/${book.attributes.slug_title}`}>
-                      <div className={styles.info}>
+                      <div className={styles.infoBookContainer}>
                         <div className={styles.titleCoverContainer}>
                           <h3 className={styles.titleCover}>
                             {book.attributes.title}
@@ -99,13 +99,6 @@ export function NoveltyBooks(props) {
                             {book.attributes.synopsis}
                           </p>
                           <div className={styles.pricesContainer}>
-                            <div className={styles.discountContainer}>
-                              {discount && discount > 0 && (
-                                <Label.Discount className={styles.discount}>
-                                  {`-${discount}%`}
-                                </Label.Discount>
-                              )}
-                            </div>
                             <div className={styles.priceContainer}>
                               {originalPrice && (
                                 <div className={styles.priceContainer}>
@@ -128,6 +121,13 @@ export function NoveltyBooks(props) {
                                     </span>
                                   )}
                                 </div>
+                              )}
+                            </div>
+                            <div className={styles.discountContainer}>
+                              {discount && discount > 0 && (
+                                <Label.Discount className={styles.discount}>
+                                  {`-${discount}%`}
+                                </Label.Discount>
                               )}
                             </div>
                           </div>
